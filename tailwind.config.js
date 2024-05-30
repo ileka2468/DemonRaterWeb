@@ -16,10 +16,17 @@ module.exports = {
       },
       colors: {
         'body': '#FFFFFF',
-        'theme_blue': '#123499'
+        'theme_blue': '#123499',
+        'hero_grey': '#737373',
+        'nav_link_grey': '#4E5E6C',
+        'auth_google_gray': '#828282',
+        'auth_faint_gray': '#DDDDDD',
+        'auth_dash_text_gray': '#A1A1A1'
+
       },
       fontFamily: {
-        plus_jakarta_sans: ["Plus+Jakarta+Sans"]
+        plus_jakarta_sans: ['Plus Jakarta Sans', 'serif'],
+        poppins: ['Poppins', 'serif']
       }
     },
   },

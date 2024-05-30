@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
 import { createClient } from "@supabase/supabase-js";
+import { Divider } from "@nextui-org/divider";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -55,9 +56,9 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className="mt-14 py-2 w-[80%] rounded-full flex justify-evenly items-center shadow">
+      <div className="mt-14 py-3 w-[85%] rounded-full flex justify-evenly items-center shadow">
         <select
-          className="outline-none"
+          className="outline-none text-hero_grey"
           name="filter"
           id="filter"
           defaultValue=""
@@ -69,9 +70,9 @@ const SearchBar = () => {
           <option value="title">Course Title</option>
           <option value="number">Course Number</option>
         </select>
-
+        <Divider orientation={"vertical"} />
         <input
-          className="outline-none"
+          className="outline-none placeholder-hero_grey w-[50%]"
           placeholder="Search for professors"
           type="text"
           value={searchText}

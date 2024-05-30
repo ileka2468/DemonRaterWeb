@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
 
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} text-gray-800 bg-hero_pattern bg-body bg-auto bg-no-repeat bg-center`}>
+      <body className={`text-gray-800 bg-hero_pattern bg-body bg-auto bg-no-repeat bg-center font-poppins`}>
         <Navbar />
         <NextUIProvider>
           {children}

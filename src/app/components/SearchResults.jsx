@@ -1,7 +1,6 @@
 import React from "react";
 import SearchIcon from "./SearchIcon";
 import { ScrollShadow } from "@nextui-org/react";
-import Image from "next/image";
 
 const SearchResults = ({
   hidden,
@@ -58,7 +57,13 @@ const SearchResults = ({
       className="w-[75%] h-[250px] mt-1 rounded-lg shadow-lg bg-body border-solid border-1 scrollbar-thin overflow-y-scroll"
       hidden={hidden}
     >
-      <ul>{resultsListItems}</ul>
+      {resultsListItems.length > 0 ? (
+        <ul>{resultsListItems}</ul>
+      ) : (
+        <ul>
+          <li>No results...</li>
+        </ul>
+      )}
     </ScrollShadow>
   );
 };
